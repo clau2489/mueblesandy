@@ -1,5 +1,5 @@
 body, html {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Raleway', sans-serif;
 	text-rendering: optimizeLegibility !important;
 	-webkit-font-smoothing: antialiased !important;
 	color: #333;
@@ -44,6 +44,10 @@ a {
 a:hover, a:focus {
 	text-decoration: none;
 	color: #222;
+}
+section{
+    margin-bottom: 2em;
+    margin-top: 2em;
 }
 .clearfix:after {
 	visibility: hidden;
@@ -92,14 +96,14 @@ hr {
 	color: #88bb45;
 }
 #menu.navbar-default .navbar-nav > li > a {
-    color: #70c792;
+    color: #58391f;
     font-size: 12px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 900;
 }
 #menu.navbar-default .navbar-nav > li > a:hover {
-    color: #4d295f;
+    color: #ab5421;
 }
 .on {
 	background-color: #ffffff !important;
@@ -152,7 +156,6 @@ header p {
 }
 .btn-default {
 	color: #71bd46;
-	font-family: 'Open Sans', sans-serif;
 	background-color: transparent;
 	border: 1px solid #71bd46;
 	border-radius: 4px;
@@ -181,7 +184,6 @@ header p {
 #about-section p {
     margin-top: 20px;
     margin-bottom: 30px;
-    font-family: sans-serif;
 }
 /* Team Section */
 #team-section {
@@ -351,10 +353,9 @@ ol.type li a:hover {
 	margin-right: 20px;
 }
 label {
-	font-size: 12px;
-	font-weight: 400;
-	font-family: 'Open Sans', sans-serif;
-	float: left;
+    font-size: 12px;
+    float: left;
+    color: #76573d;
 }
 #contact-section .form-control {
 	display: block;
@@ -380,15 +381,15 @@ label {
 	box-shadow: transparent;
 }
 #contact-section .btn {
-	background: #71bd46;
-	border: 1px solid #71bd46;
-	border-radius: 4px;
-	padding: 10px 20px;
-	margin-top: 20px;
-	color: #fff;
+    background: #76573d;
+    border: 1px solid #af8b6d;
+    border-radius: 4px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    color: #fff;
 }
 #contact-section .btn:hover, #contact-section .btn:focus {
-	background: #457d25;
+	background: #463629;
 	color: #fff;
 }
 #contact-section .text-danger {
@@ -413,8 +414,8 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 }
 #social-section .social i.fa {
     font-size: 28px;
-    /* padding: 4px 5px; */
-    color: #fbfbfb;
+    padding: 4px 5px;
+    color: #76573d;
     transition: all 0.5s;
 }
 #social-section .social i.fa:hover {
@@ -422,7 +423,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 }
 /* Footer */
 #footer {
-    background-color: #6c52c38f;
+    background-color: #f7dfc1c4;
     /* color: #009688; */
     padding-top: 4em;
     padding-bottom: 3em;
@@ -430,7 +431,8 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 #footer p {
     font-size: 13px;
     margin-top: 10px;
-    color: #ffffff;
+    color: #76573d;
+    font-weight: 700;
 }
 #footer a {
 	color: #aaa;
@@ -523,7 +525,6 @@ label {
 	transition: 0.5s;
 }
 #objetivo {
-    font-family: unset;
     font-style: oblique;
     font-size: 20px;
     color: black;
@@ -535,7 +536,6 @@ label {
 }
 
 #pay-section h1 {
-    font-family: unset;
     color: aliceblue;
     text-align: center;
 }
@@ -545,7 +545,6 @@ label {
 }
 
 #book-section h1 {
-    font-family: 'Open Sans', sans-serif;
     color: #6955ce;
     text-align: center;
     font-size: 41px;
@@ -623,18 +622,21 @@ header {
 }
 
 #menu{
-    background-color: white;
+    /*background-image: url("../img/gallery/fondo.png");
+	background-size: contain;*/
+	background-color: #f7dfc1c4;
 }
 
-
-
-@import url(https://fonts.googleapis.com/css?family=Quicksand:400,300);
-body{
-    font-family: 'Quicksand', sans-serif;
-}
 .gal-container{
-	padding: 12px;
+	background-image: url("../img/gallery/fondo.png");
+	background-size: contain;
+    padding-top: 75px;
+    padding-bottom: 75px;
+    padding-left: 3em;
+    padding-right: 3em;	
 }
+
+
 .gal-item{
 	overflow: hidden;
 	padding: 3px;
@@ -654,7 +656,6 @@ body{
 }
 .gal-item a:after{
 	content:"\e003";
-	font-family: 'Glyphicons Halflings';
 	opacity: 0;
 	background-color: rgba(0, 0, 0, 0.75);
 	position: absolute;
@@ -764,8 +765,19 @@ i.red{
     padding-bottom:75px;
 }
 footer{
-    font-family: 'Quicksand', sans-serif;
+
 }
 footer a,footer a:hover{
     color: #88C425;
+}
+
+#pinterest{
+	background-image: url("../img/pinterest/fondo.png");
+	background-size: contain;
+}
+.pal-container{
+	padding-top: 75px;
+	padding-bottom: 75px;
+	padding-left: 2em;
+	padding-right: 2em;
 }
