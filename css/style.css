@@ -3,8 +3,6 @@ body, html {
 	text-rendering: optimizeLegibility !important;
 	-webkit-font-smoothing: antialiased !important;
 	color: #333;
-	background-image: url("../img/images.jpg");
-	background-size: cover;
 }
 h1 {
 }
@@ -33,10 +31,10 @@ h5 {
 	text-align: center;
 }
 p {
-    font-family: unset;
-    /* color: #000; */
-    line-height: 18px;
-    font-size: 13px;
+    /* font-family: inherit; */
+    color: #000;
+    line-height: 22px;
+    font-size: 14px;
 }
 a {
 	color: #71bd46;
@@ -170,8 +168,7 @@ header p {
 }
 /* About Section */
 #about-section {
-    /* padding: 50px 50px; */
-    background-color: #fbfbfb;
+    background-color: #f9e6cf;
     padding-top: 4em;
     padding-bottom: 4em;
 }
@@ -628,12 +625,8 @@ header {
 }
 
 .gal-container{
-	background-image: url("../img/gallery/fondo.png");
-	background-size: contain;
     padding-top: 75px;
     padding-bottom: 75px;
-    padding-left: 3em;
-    padding-right: 3em;	
 }
 
 
@@ -654,8 +647,10 @@ header {
 .gal-item a:focus{
 	outline: none;
 }
+
 .gal-item a:after{
-	content:"\e003";
+	content:"+";
+	font-family: 'Glyphicons Halflings';
 	opacity: 0;
 	background-color: rgba(0, 0, 0, 0.75);
 	position: absolute;
@@ -671,6 +666,7 @@ header {
     -moz-transition: all 0.5s ease-in-out 0s;
     transition: all 0.5s ease-in-out 0s;
 }
+
 .gal-item a:hover:after{
 	opacity: 1;
 }
@@ -760,10 +756,7 @@ header {
 i.red{
     color:#BC0213;
 }
-.gal-container{
-    padding-top :75px;
-    padding-bottom:75px;
-}
+
 footer{
 
 }
@@ -771,8 +764,12 @@ footer a,footer a:hover{
     color: #88C425;
 }
 
-#pinterest{
+#pinterest-section{
 	background-image: url("../img/pinterest/fondo.png");
+	background-size: contain;
+}
+#gallery-section{
+	background-image: url("../img/gallery/fondo.png");
 	background-size: contain;
 }
 .pal-container{
@@ -780,4 +777,12 @@ footer a,footer a:hover{
 	padding-bottom: 75px;
 	padding-left: 2em;
 	padding-right: 2em;
+}
+.img-frame {
+    width: 100%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+.pb-3{
+	padding-bottom: 3em;
 }
