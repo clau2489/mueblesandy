@@ -385,26 +385,25 @@
         <div class="text-center">
           <img src="img/Formulario/web-30.png" width="70%">
         </div>       
-        <form id="contact" action="php/contacto.php" method="post">
-          <div class="form-group">
-              <label for="nombre">Nombre y Apellido</label>
-              <input id="nombre" type="text" name="nombre" class="form-control" required>
-            </div>
-            <div class="form-group">
-              <label for="asunto">Asunto</label>
-              <input id="asunto" type="text" name="asunto" class="form-control" required>
-            </div>                    
-            <div class="form-group">
-              <label for="email">E-mail</label>
-              <input id="email" type="email" name="email" class="form-control" required>
-            </div>                    
-            <div class="form-group">
-              <label for="mensaje">Mensaje</label>
-              <textarea id="mensaje" name="mensaje" class="form-control" rows="6" required></textarea>
-            </div>
-            <button name="submit" type="submit" id="contact-submit" class="btn btn-warning"> ENVIAR </button>
-            <div id="miresultado"></div>                    
-        </form>
+            <form action="enviarmail.php" method="post" class="alert alert-mmp">          
+              <div class="form-group">
+                <label>Nombre y Apellido: </label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required>
+              </div>
+              <div class="form-group">
+                <label>Asunto del mensaje: </label>
+                <input type="text" class="form-control" id="asunto" name="asunto" required>
+              </div>
+              <div class="form-group">
+                <label>Telefono de Contacto: </label>
+                <input type="number" class="form-control" id="telefono" name="telefono" required>
+              </div>              
+              <div class="form-group">
+                <label>Tu comentario: </label>
+                <textarea class="form-control" id="mensaje" name="mensaje" rows="5" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-success btn-block">Enviar</button>
+            </form>
       </div>
       <div class="col-md-6">
         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2320.8643664148835!2d-58.76963715616265!3d-34.64970565823908!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDM4JzU4LjkiUyA1OMKwNDYnMDQuMCJX!5e0!3m2!1ses!2sar!4v1603839903751!5m2!1ses!2sar" width="100%" height="550" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
