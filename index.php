@@ -24,6 +24,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <script type="text/javascript" src="js/modernizr.custom.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>  
 </head>
 
 <body>
@@ -385,25 +388,27 @@
         <div class="text-center">
           <img src="img/Formulario/web-30.png" width="70%">
         </div>       
-            <form action="enviarmail.php" method="post" class="alert alert-mmp">          
-              <div class="form-group">
-                <label>Nombre y Apellido: </label>
-                <input type="text" class="form-control" id="nombre" name="nombre" required>
-              </div>
-              <div class="form-group">
-                <label>Asunto del mensaje: </label>
-                <input type="text" class="form-control" id="asunto" name="asunto" required>
-              </div>
-              <div class="form-group">
-                <label>Telefono de Contacto: </label>
-                <input type="number" class="form-control" id="telefono" name="telefono" required>
-              </div>              
-              <div class="form-group">
-                <label>Tu comentario: </label>
-                <textarea class="form-control" id="mensaje" name="mensaje" rows="5" required></textarea>
-              </div>
-              <button type="submit" class="btn btn-success btn-block">Enviar</button>
-            </form>
+        <form class="alert alert-mmp" method="post" action="enviar.php">
+          <h4>Completa el formulario con tus datos</h4>
+          <br><br>               
+          <div class="form-group">
+            <label>Nombre y Apellido: </label>
+            <input type="text" class="form-control" id="nombre" name="nombre" required>
+          </div>
+          <div class="form-group">
+            <label>Asunto del mensaje: </label>
+            <input type="text" class="form-control" id="asunto" name="asunto" required>
+          </div>
+          <div class="form-group">
+            <label>Telefono de Contacto: </label>
+            <input type="number" class="form-control" id="telefono" name="telefono" required>
+          </div>              
+          <div class="form-group">
+            <label>Tu comentario: </label>
+            <textarea class="form-control" id="mensaje" name="mensaje" rows="5" required></textarea>
+          </div>
+          <input type="submit" class="btn btn-default btn-block" value="Enviar">
+        </form>
       </div>
       <div class="col-md-6">
         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2320.8643664148835!2d-58.76963715616265!3d-34.64970565823908!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDM4JzU4LjkiUyA1OMKwNDYnMDQuMCJX!5e0!3m2!1ses!2sar!4v1603839903751!5m2!1ses!2sar" width="100%" height="550" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>

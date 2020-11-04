@@ -14,18 +14,18 @@ $mail->IsSMTP();
 
 //Configuracion servidor mail
 $mail->From = "modernizacionmmp@gmail.com"; //remitente
-$mail->FromName = "muebles-andy.com"; //remitente
+$mail->FromName = "Sub-Secretaria de Modernizacion e Innovacion"; //remitente
 $mail->SMTPAuth = true;
 $mail->SMTPSecure = 'tls'; //seguridad
 $mail->Host = "smtp.gmail.com"; // servidor smtp
 $mail->Port = 587; //puerto
 $mail->Username ='modernizacionmmp@gmail.com'; //nombre usuario
 $mail->Password = 'modernizacionmarcospaz55'; //contraseña
- 
+
 
 //Agregar destinatario	
-$mail->AddAddress('ventas@muebles-andy.com');
-$mail->Subject = "Contacto a través del Sitio Web";
+$mail->AddAddress('clau_coronelmilla@hotmail.com');
+$mail->Subject = "Buzon de Sugerencias | Marcos Paz digital";
 $mail->Body = " \n
 Buenos días, recibiste una sugerencia a través de http://marcospazdigital.gob.ar: \n
 Apellido/s y Nombre/s: ". $nombre ."\n
