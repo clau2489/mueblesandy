@@ -388,9 +388,7 @@
         <div class="text-center">
           <img src="img/Formulario/web-30.png" width="70%">
         </div>       
-        <form class="alert alert-mmp" method="post" action="enviar.php">
-          <h4>Completa el formulario con tus datos</h4>
-          <br><br>               
+        <form class="alert alert-mmp" method="POST" action="enviarmail.php">               
           <div class="form-group">
             <label>Nombre y Apellido: </label>
             <input type="text" class="form-control" id="nombre" name="nombre" required>
@@ -407,7 +405,7 @@
             <label>Tu comentario: </label>
             <textarea class="form-control" id="mensaje" name="mensaje" rows="5" required></textarea>
           </div>
-          <input type="submit" class="btn btn-default btn-block" value="Enviar">
+          <input type="submit" class="btn btn-default" value="Enviar">
         </form>
       </div>
       <div class="col-md-6">
@@ -432,7 +430,7 @@
       </div>
       <div class="row">
         <div class="col-md-12">
-          <p>www.muebles.andy.com - Santa Fé XXX Moreno, Pcia. de Buenos Aires</p>
+          <p>www.muebles.andy.com - Santa Fé 1474 Moreno, Pcia. de Buenos Aires</p>
           <p></p>
           <p>
             &copy; muebles-andy - Todos los derechos reservados
@@ -448,10 +446,10 @@
     <div class="container-fluid text-center">
       <div class="row">
         <div class="col-md-6">
-          <p style="color: #f9e6cf; font-size: 11px">Diseño <a href="">Estudio Nandia</a></p>
+          <p style="color: #f9e6cf; font-size: 11px">Designed by <a href=""><img src="img/nandia.png" width="70px"></a></p>
         </div>
         <div class="col-md-6">
-          <p style="color: #f9e6cf; font-size: 11px">Desarrollado por <a href="https://www.facebook.com/Oeste-DEV-598738743937416"><img src="img/oestedev.png" width="80px"></a></p>
+          <p style="color: #f9e6cf; font-size: 11px">Powered by <a href="https://www.facebook.com/Oeste-DEV-598738743937416"><img src="img/oestedev.png" width="90px"></a></p>
         </div>        
       </div>    
     </div>    
@@ -459,7 +457,8 @@
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
-  <script type="text/javascript" src="js/jquery.1.11.1.js"></script> 
+  <script type="text/javascript" src="js/jquery.1.11.1.js"></script>
+  <script type="text/javascript" src="js/contact_me.js"></script> 
   <script type="text/javascript" src="js/bootstrap.js"></script> 
   <script type="text/javascript" src="js/SmoothScroll.js"></script> 
   <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script> 
