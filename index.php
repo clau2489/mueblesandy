@@ -1,3 +1,6 @@
+<?php 
+include("conexion.php");
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -150,17 +153,66 @@
           <img src="img/gallery/web-11.png" class="img-frame">
         </div>        
       </div>
+
+      <?php
+        $nums=1;
+        $sql_banner_top=mysqli_query($con,"select * from banner where estado=1 order by orden ");
+        while($rw_banner_top=mysqli_fetch_array($sql_banner_top)){
+          ?>
+          
+          <!--<div class="col-lg-3 col-md-4 col-xs-6 thumb">
+            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="<?php echo $rw_banner_top['titulo'];?>" data-caption="<?php echo $rw_banner_top['descripcion'];  ?>" data-image="img/banner/<?php echo $rw_banner_top['url_image'];?>" data-target="#image-gallery">
+              <img class="img-responsive" src="img/banner/<?php echo $rw_banner_top['url_image'];?>" alt="Another alt text">
+            </a>
+          </div> -->
+
+
+          <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
+            <div class="box">
+              <a target="_blank" href="#" data-toggle="modal" data-target="#<?php echo $rw_banner_top['id'];?>">
+                <img src="img2/banner/<?php echo $rw_banner_top['url_image'];?>"> <i class="fa fa-edit"></i>
+              </a>
+              <div class="modal fade" id="<?php echo $rw_banner_top['id'];?>" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"> x</span></button>
+                    <div class="modal-body">
+                      <img src="img2/banner/<?php echo $rw_banner_top['url_image'];?>">
+                    </div>
+                      <div class="col-md-12 description">
+                        <h4 style="color: white">www.muebles.andy.com</h4>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <?php
+          
+          if ($nums%4==0){
+            
+          }
+          $nums++;
+        }
+      ?>
+
+
+
+      <!--
       <div class="col-md-4 col-sm-6 co-xs-12 gal-item">
         <div class="box">
           <a target="_blank" href="#" data-toggle="modal" data-target="#1">
-            <img src="img/gallery/galeria-23.png"> <i class="fa fa-edit"></i>
+            <img src="img/banner/<?php echo $rw_banner_top['url_image'];?>"> <i class="fa fa-edit"></i>
           </a>
           <div class="modal fade" id="1" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"> x</span></button>
                 <div class="modal-body">
-                  <img src="img/gallery/galeria-23.png">
+                  <img src="img/banner/<?php echo $rw_banner_top['url_image'];?>">
                 </div>
                   <div class="col-md-12 description">
                     <h4 style="color: white">www.muebles.andy.com</h4>
@@ -329,7 +381,10 @@
             </div>
           </div>
         </div>
-      </div>      
+      </div>
+      -->
+
+
     </div>
   </section>
 
@@ -424,6 +479,7 @@
               <li><a target="_blank" href="https://www.facebook.com/Mueblesandy-108642234154582"><i class="fa fa-facebook"></i></a></li>
               <li><a target="_blank" href="https://www.instagram.com/muebles.andy/"><i class="fa fa-instagram"></i></a></li>
               <li><a target="_blank" href="https://ar.pinterest.com/mueblesandy"><i class="fa fa-pinterest"></i></a></li>
+               <li><a href="admin/index.php"><i class="fa fa-rss"></i></a></li>
             </ul>
           </div>
         </div>
@@ -466,6 +522,64 @@
   <script type="text/javascript" src="js/jqBootstrapValidation.js"></script> 
   <script type="text/javascript" src="js/contact_me.js"></script> 
   <script type="text/javascript" src="js/main.js"></script>
+
+    <script>
+  $(document).ready(function(){
+    loadGallery(true, 'a.thumbnail');
+    //This function disables buttons when needed
+    function disableButtons(counter_max, counter_current){
+        $('#show-previous-image, #show-next-image').show();
+        if(counter_max == counter_current){
+            $('#show-next-image').hide();
+        } else if (counter_current == 1){
+            $('#show-previous-image').hide();
+        }
+    }
+    /**
+     *
+     * @param setIDs        Sets IDs when DOM is loaded. If using a PHP counter, set to false.
+     * @param setClickAttr  Sets the attribute for the click handler.
+     */
+
+    function loadGallery(setIDs, setClickAttr){
+        var current_image,
+            selector,
+            counter = 0;
+
+        $('#show-next-image, #show-previous-image').click(function(){
+            if($(this).attr('id') == 'show-previous-image'){
+                current_image--;
+            } else {
+                current_image++;
+            }
+
+            selector = $('[data-image-id="' + current_image + '"]');
+            updateGallery(selector);
+        });
+
+        function updateGallery(selector) {
+            var $sel = selector;
+            current_image = $sel.data('image-id');
+            $('#image-gallery-caption').text($sel.data('caption'));
+            $('#image-gallery-title').text($sel.data('title'));
+            $('#image-gallery-image').attr('src', $sel.data('image'));
+            disableButtons(counter, $sel.data('image-id'));
+        }
+
+        if(setIDs == true){
+            $('[data-image-id]').each(function(){
+                counter++;
+                $(this).attr('data-image-id',counter);
+            });
+        }
+        $(setClickAttr).on('click',function(){
+            updateGallery($(this));
+        });
+    }
+});
+  </script>
+
+
 
 </body>
 
