@@ -29,9 +29,9 @@
 						<h5>Gestor de Imágenes</h5>
 						<br>
 						<label>Contraseña:</label><br>
-						<input type="password" name="password" class="form-control">
+						<input type="password" name="password" class="form-control form-control-sm">
 						<br>
-						<input type="submit" name="" value="Ingresar" class="btn btn-success btn-sm">			
+						<input type="submit" name="" value="Ingresar" class="btn btn-info btn-sm btn-block">			
 					</form>
 				</div>				
 			</div>
